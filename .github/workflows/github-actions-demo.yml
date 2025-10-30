@@ -5,11 +5,11 @@ on: [push]
 
 jobs:
     Explorar-GitHub-Actions:
-        runs-on: ubunto-latest
+        runs-on: ubuntu-latest
         steps:
             - run: echo "🎉 O job for automáticamente trigado pelo evento ${{ github.event_name }}."
-            - run: echo "🐧 Esse job está rodando em um servidor ${{ runner.os }} hostiado pelo GitHub!"
-            - run: echo "🔎 O nome da branch é ${{ github.ref }} e o seu repositório é ${{ github.repository }}". 
+            - run: echo "🐧 Esse job está rodando em um servidor ${{ runner.os }} hospedado pelo GitHub!"
+            - run: echo "🔎 O nome da branch é ${{ github.ref }} e o seu repositório é ${{ github.repository }}."
 
             - name: Checa o código do repositório
               uses: actions/checkout@v5
@@ -17,7 +17,7 @@ jobs:
             - run: echo "💡 O repositório ${{ github.repository }} foi clonado para o runner."
             - run: echo "🖥️ O workflow está agora pronto para testar o seu código no runner."
             
-            - name: Lista os arquivos do repósitório
+            - name: Lista os arquivos do repositório
               run: |
                 ls ${{ github.workspace }}
             
